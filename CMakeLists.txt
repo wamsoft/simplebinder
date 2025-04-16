@@ -8,7 +8,9 @@ set(PROJECT_VERSION 1.00)
 
 project(${PROJECT_NAME} VERSION ${PROJECT_VERSION})
 
+if(NOT TARGET tp_stub)
 add_subdirectory(../tp_stub ${CMAKE_CURRENT_BINARY_DIR}/tp_stub)
+endif()
 
 add_library(${PROJECT_NAME} STATIC
     v2link.cpp
