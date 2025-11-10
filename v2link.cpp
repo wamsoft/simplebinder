@@ -46,7 +46,7 @@ private:
 		if (exporter) {
 			const ttstr prefix (TJS_W("bool ::TVPGetFileVersionOf(const "));
 			const ttstr postfix(TJS_W(" *,tjs_int &,tjs_int &,tjs_int &,tjs_int &)"));
-			if (HasExportedFunction(exporter, ttstr(prefix + TJS_W("wchar_t") + postfix).c_str())) return 1; // KZ
+			if (HasExportedFunction(exporter, ttstr(prefix + TJS_W("tjs_char") + postfix).c_str())) return 1; // KZ
 			if (HasExportedFunction(exporter, ttstr(prefix + TJS_W("char")    + postfix).c_str())) return 2; // K2
 		}
 		return -1;
